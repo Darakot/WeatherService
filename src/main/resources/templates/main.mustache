@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div>
+            <p> Выбранный город: {{cityText}}</p>
+            <p> Выбранный сервис погоды: {{serviceText}}</p>
+            <form method="post">
+                <select name = "city">
+                    <option value="yekaterinburg">Екатеринбург</option>
+                    <option value="moscow">Москва</option>
+                    <option value="saint-petersburg">Санкт-Питербург</option>
+                </select>
+
+                <select name = "service">
+                    <option value="1">Yandex</option>
+                    <option value="2">Foreca</option>
+                </select>
+
+                <button type="submit"> Получить погоду </button>
+            </form>
+        </div>
+        {{#weather}}
+        <div>
+            <il> {{.}} </il>
+        </div>
+        {{/weather}}
+    </body>
+</html>
