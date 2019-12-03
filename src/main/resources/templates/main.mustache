@@ -1,20 +1,23 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <title>Weather</title>
+        <meta charset="utf-8">
+    </head>
     <body>
         <div>
             <p> Выбранный город: {{cityText}}</p>
             <p> Выбранный сервис погоды: {{serviceText}}</p>
             <form method="post">
-                <select name = "city">
+                <select name = "city" id="ci">
                     <option value="yekaterinburg">Екатеринбург</option>
                     <option value="moscow">Москва</option>
                     <option value="saint-petersburg">Санкт-Питербург</option>
                 </select>
-
-                <select name = "service">
+                <select name = "service" id="ser">
                     <option value="1">Yandex</option>
                     <option value="2">Foreca</option>
                 </select>
-
                 <button type="submit"> Получить погоду </button>
             </form>
         </div>

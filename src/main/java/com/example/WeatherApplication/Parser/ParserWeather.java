@@ -5,6 +5,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,6 +18,8 @@ import java.util.Map;
  * При парсинге сайта www.foreca.ru есть интересный момент, когда парсится давление конечно значение отображает в гПа,
  * а не в миллиметрах ртутного столба. Поделив на 1.382, получим значение  в миллиметрах ртутного столба.
  */
+
+@Component
 public class ParserWeather {
     private final String forecaSite = "https://www.foreca.ru/Russia/";
     private final String yandexSite = "https://yandex.ru/pogoda/";
